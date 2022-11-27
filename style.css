@@ -157,3 +157,34 @@ main{
 .task .actions .delete{
     color: crimson;
 }
+
+.icon2{
+    font-size: 2.5rem;
+    
+}
+
+
+@media screen and (min-width:400px ){
+    .icon2{
+        visibility: hidden;
+    }
+    
+}
+
+
+@media screen and (max-width: 400px) {
+    #new-task-submit{
+     display:contents;
+      
+    }
+    #new-task-input {
+        font-size: 1rem;
+    }
+    .task .actions button{
+        font-size: 0.8rem;
+    }
+    .icon{
+        visibility: hidden;
+    }
+        
+  }
