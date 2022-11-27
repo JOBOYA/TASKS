@@ -160,7 +160,8 @@ main{
 
 .icon2{
     font-size: 2.5rem;
-    
+    padding-left: 40%;
+    top: 30%;
 }
 
 
@@ -185,6 +186,21 @@ main{
     }
     .icon{
         visibility: hidden;
+    }
+    .task-list{
+        padding: 0.01rem;
+        border-radius: 1rem;
+        margin-bottom: 1rem;    
+    }
+    .text{
+        width: auto;
+    }
+
+    .delete, .edit{
+        justify-content: space-between;
+    }
+    h1{
+        margin: 15px;
     }
         
   }
