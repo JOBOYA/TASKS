@@ -1,12 +1,22 @@
-
-
 window.addEventListener('load', () => {
+    todos = JSON.parse(localStorage.getItem('todos')) || [];
+    const nameInput = document.querySelector('#new-task-form')
+    const local = localStorage.getItem('local') || '';
+    
+    nameInput.value = local;
+
+    nameInput.addEventListener('change', e => {
+        localStorage.setItem('local', e.target.value)
+    })
+
+
+
     const form =document.querySelector('#new-task-form');
     const input = document.querySelector('#new-task-input');
     const list_el = document.querySelector('#tasks');
-
-    //localstorage
    
+    //localstorage
+    
    
     form.addEventListener('submit', (e) => {
         e.preventDefault()
@@ -39,11 +49,13 @@ window.addEventListener('load', () => {
 
         const task_edit_el = document.createElement("button");
         task_edit_el.classList.add("edit");
-        task_edit_el.innerHTML = "Edit"
+        task_edit_el.innerHTML = "Edit";
+        
 
         const task_delete_el = document.createElement("button");
         task_delete_el.classList.add("delete");
         task_delete_el.innerHTML = "Del";
+       
 
         task_actions_el.appendChild(task_edit_el);
         task_actions_el.appendChild(task_delete_el);
@@ -69,4 +81,5 @@ window.addEventListener('load', () => {
                 list_el.removeChild(task_el)
             });
     });
+  
 });
