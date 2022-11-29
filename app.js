@@ -1,17 +1,8 @@
-window.addEventListener('load', () => {
-    todos = JSON.parse(localStorage.getItem('todos')) || [];
-    const nameInput = document.querySelector('#new-task-form')
-    const local = localStorage.getItem('local') || '';
-    
-    nameInput.value = local;
 
-    nameInput.addEventListener('change', e => {
-        localStorage.setItem('local', e.target.value)
-    })
+  
 
-
-
-    const form =document.querySelector('#new-task-form');
+    window.addEventListener('load', () => {
+    const form = document.querySelector('#new-task-form');
     const input = document.querySelector('#new-task-input');
     const list_el = document.querySelector('#tasks');
    
